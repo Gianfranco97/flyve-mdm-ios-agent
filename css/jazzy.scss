@@ -38,54 +38,54 @@ $aside_warning_border: 5px solid lighten($aside_warning_color, 20%);
 // Reset
 ////////////////////////////////
 
-html, body, div, span, h1, h3, h4, p, a, code, em, img, ul, li, table, tbody, tr, td {
-  background: transparent;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
+// html, body, div, span, h1, h3, h4, p, a, code, em, img, ul, li, table, tbody, tr, td {
+//   background: transparent;
+//   border: 0;
+//   margin: 0;
+//   outline: 0;
+//   padding: 0;
+//   vertical-align: baseline;
+// }
 
 ////////////////////////////////
 // Global
 ////////////////////////////////
 
-body {
-  background-color: $light_gray_bg_color;
-  font-family: Helvetica, freesans, Arial, sans-serif;
-  font-size: 14px;
-  -webkit-font-smoothing: subpixel-antialiased;
-  word-wrap: break-word;
-}
+// body {
+//   background-color: $light_gray_bg_color;
+//   font-family: Helvetica, freesans, Arial, sans-serif;
+//   font-size: 14px;
+//   -webkit-font-smoothing: subpixel-antialiased;
+//   word-wrap: break-word;
+// }
 
 // Headers
 
-h1, h2, h3 {
-  margin-top: 0.8em;
-  margin-bottom: 0.3em;
-  font-weight: 100;
-  color: black;
-}
-h1 {
-  font-size: 2.5em;
-}
-h2 {
-  font-size: 2em;
-  border-bottom: $gray_border;
-}
-h4 {
-  font-size: 13px;
-  line-height: 1.5;
-  margin-top: 21px;
-}
-h5 {
-  font-size: 1.1em;
-}
-h6 {
-  font-size: 1.1em;
-  color: $code_color;
-}
+// h1, h2, h3 {
+//   margin-top: 0.8em;
+//   margin-bottom: 0.3em;
+//   font-weight: 100;
+//   color: black;
+// }
+// h1 {
+//   font-size: 2.5em;
+// }
+// h2 {
+//   font-size: 2em;
+//   border-bottom: $gray_border;
+// }
+// h4 {
+//   font-size: 13px;
+//   line-height: 1.5;
+//   margin-top: 21px;
+// }
+// h5 {
+//   font-size: 1.1em;
+// }
+// h6 {
+//   font-size: 1.1em;
+//   color: $code_color;
+// }
 .section-name {
   color: rgba(128,128,128,1);
   display: block;
@@ -97,6 +97,10 @@ h6 {
 
 // Code
 
+code {
+    white-space: normal !important;
+}
+
 pre, code {
   font: $code_font;
   color: $code_color;
@@ -106,29 +110,30 @@ p code, li code {
   background-color: $code_bg_color;
   padding: 2px 4px;
   border-radius: 4px;
+  
 }
 
 // Links
 
-a {
-  color: $link_color;
-  text-decoration: none;
-}
+// a {
+//   color: $link_color;
+//   text-decoration: none;
+// }
 
 // Lists
 
-ul {
-  padding-left: 15px;
-}
-li {
-  line-height: 1.8em;
-}
+// ul {
+//   padding-left: 15px;
+// }
+// li {
+//   line-height: 1.8em;
+// }
 
 // Images
 
-img {
-  max-width: 100%;
-}
+// img {
+//   max-width: 100%;
+// }
 
 // Blockquotes
 
@@ -149,42 +154,46 @@ blockquote {
 // Header & Top Breadcrumbs
 ////////////////////////////////
 
-header {
-  font-size: 0.85em;
-  line-height: $header_height;
-  background-color: $bg_color;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  img {
-    padding-right: 6px;
-    vertical-align: -4px;
-    height: 16px;
-  }
-  a {
-    color: $white_color;
-  }
-  p {
-    float: left;
-    color: $doc_coverage_color;
-  }
-  .header-right {
-    float: right;
-    margin-left: 16px;
-  }
-}
+// header {
+//   font-size: 0.85em;
+//   line-height: $header_height;
+//   background-color: $bg_color;
+//   position: fixed;
+//   width: 100%;
+//   z-index: 1;
+//   img {
+//     padding-right: 6px;
+//     vertical-align: -4px;
+//     height: 16px;
+//   }
+//   a {
+//     color: $white_color;
+//   }
+//   p {
+//     float: left;
+//     color: $doc_coverage_color;
+//   }
+//   .header-right {
+//     float: right;
+//     margin-left: 16px;
+//   }
+// }
 
 #breadcrumbs {
   background-color: $light_gray_bg_color;
-  height: $content_top_offset - $header_height - $breadcrumb_padding_top;
-  padding-top: $breadcrumb_padding_top;
-  position: fixed;
+  // height: $content_top_offset - $header_height - $breadcrumb_padding_top;
+  padding: 10px;
+  // position: fixed;
   width: 100%;
   z-index: 1;
-  margin-top: $header_height;
+  margin: $header_height 0;
+  vertical-align: middle;
   #carat {
     height: 10px;
     margin: 0 5px;
+  }
+  p {
+    
   }
 }
 
@@ -193,13 +202,13 @@ header {
 ////////////////////////////////
 
 .sidebar {
-  background-color: $sidebar_bg_color;
   border: $gray_border;
-  overflow-y: auto;
   overflow-x: hidden;
-  position: fixed;
+  // position: fixed;
+
+  float: left;
+
   top: $content_top_offset;
-  bottom: 0;
   width: $sidebar_width;
   word-wrap: normal;
 }
@@ -241,7 +250,7 @@ header {
   background-color: $white_color;
   border: $gray_border;
   margin-left: $content_body_left_offset;
-  position: absolute;
+  // position: absolute;
   overflow: hidden;
   padding-bottom: 60px;
   top: $content_top_offset;
