@@ -10,16 +10,8 @@ plugins:
 
 repository: flyve-mdm/flyve-mdm-ios-agent
 
-defaults:
-  - scope:
-      path: ""
-      type: docs
-    values:
-      layout: page
-
 collections:
   docs:
-    layout: page
     output: true
 
 
